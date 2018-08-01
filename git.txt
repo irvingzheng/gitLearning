@@ -1,0 +1,24 @@
+
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"   : 设置身份名
+
+mkdir xxxx  
+cd 
+pwd
+git init  ： 创建仓库
+git add  xxx ： 把文件添加到仓库中
+git commit -m "" ：提交到仓库中 ，后面添加注释
+git status : 查看仓库的状态
+git diff  xxx :  查看文件的不同  （ git diff head xxx ：某个文件与当前版本不一样的地方）
+git log  --pretty==oneline : 查看提交日志
+git reset --hard head^  : 返回上一个版本
+git reset --hard (commitId) : 根据id来返回某个版本
+git reflog 	查看命令历史
+工作区 ，版本库（.git 包含暂存区，master head ）
+git checkout --file : 撤回修改
+git rm xxx  --- git commit  ： 删除文件  误删了不要提交，直接git checkout -- file 就可以回退
+$ ssh-keygen -t rsa -C "youremail@example.com" 生成公私钥
+$ git remote add origin git@github.com:michaelliao/learngit.git  连接远程库
+git push -u origin master  第一次推送master分支的所有内容；
+git push origin master  推送更新内容
+git clone git@github.com:michaelliao/gitskills.git
