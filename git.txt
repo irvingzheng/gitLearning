@@ -22,3 +22,19 @@ $ git remote add origin git@github.com:michaelliao/learngit.git  连接远程库
 git push -u origin master  第一次推送master分支的所有内容；
 git push origin master  推送更新内容
 git clone git@github.com:michaelliao/gitskills.git
+git branch : 查看分支
+git branch xx : 创建分支
+git checkout branch : 切换分支
+git merge xx  : 将 xx分支合并到当前分支  采用Fast-forward ，直接将master 指向dev提交的
+git branch -d xx : 删除分支
+git  log --graph  : 查看日志
+git merge  --no-ff -m ""  xx  : 不用发fast forward 这个方式合并
+关于分支的管理 ：
+master : 用于发布生产的代码
+dev : master的分支，用于开发 ,
+irving  : 本地的开发 ，开发提交到dev , 再提交到master
+git stash : 可以先保存 修改的  变为不提交的内容 ，
+git stash list : 查看暂存的内容
+git stash pop 还原，并将暂存的数据删掉
+git branch -D xx : 强制删除
+git branch --set-upstream-to xx origin/xx ： 建立本地分支与远程分支的关联
